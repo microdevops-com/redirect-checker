@@ -3,6 +3,10 @@ import csv
 import sys
 import requests
 
+if len(sys.argv) < 3 :
+    print("Usage: " + __file__ + " urls_list.csv result.csv")
+    sys.exit(2)
+
 file_source = open(sys.argv[1], 'r')
 file_dest = open(sys.argv[2], 'w')
 
